@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>2d-3d</title>
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			.d{
+				width: 270px;
+				height: 359px;
+				margin: 300px auto; 
+				transform-style: preserve-3d;
+				 position: relative; 
+				 animation: flash 4s infinite ;
+				
+			}	
+			@keyframes flash{
+				from{
+					transform: rotate3d(1,1,0,0deg);
+				}
+				to{
+					transform: rotate3d(1,1,0,360deg);
+				}
+			}
+			.d .child{
+				width: 270px;
+				height:359px;
+				 position: absolute; 
+				left: 0px;
+				right: 0px;
+				opacity: 0.5;
+				transition: all 2s;
+			}
+			.d .kid{
+				width: 270px;
+				height:359px;
+				position: absolute; 
+				left: 0px;
+				right: 0px;
+				opacity: 0.5;
+				transition: all 2s;
+			}
+			.d .childm{
+				width: 270px;
+				height:270px;
+				position: absolute; 
+				left: 0px;
+				right: 0px;
+				opacity: 0.5;
+				transition: all 2s;
+			}
+			.d .kidm{
+				width: 270px;
+				height:270px;
+				position: absolute; 
+				left: 0px;
+				right: 0px;
+				opacity: 0.5;
+				transition: all 2s;
+			}
+			 .front{
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% 100%; 
+				transform: translateZ(135px);
+			}
+			.d:hover .front{
+				transform: translateZ(335px);
+			}
+			.back{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: translateZ(-135px);
+			}
+			.d:hover .back{
+				transform: translateZ(-335px);
+			}
+			.left{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateY(-90deg)  translateZ(135px);
+			}
+			.d:hover .left{
+				transform: rotateY(-90deg)  translateZ(335px);
+			}
+			.right{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateY(90deg)  translateZ(135px);
+			}
+			.d:hover .right{
+				transform: rotateY(90deg)  translateZ(335px);
+			}
+			.top{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateX(90deg)  translateZ(135px);
+			}
+			.d:hover .top{
+				transform: rotateX(90deg)  translateZ(335px);
+			}
+			.bottom{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateX(-90deg)  translateZ(224px);
+			}
+			.d:hover .bottom{
+				transform: rotateX(-90deg)  translateZ(424px);
+			}
+			.frontm{
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% 100%; 
+				transform: translateZ(135px);
+			}
+			.backm{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: translateZ(-135px);
+			}
+			.leftm{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateY(-90deg)  translateZ(135px);
+			}
+			.rightm{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateY(90deg)  translateZ(135px);
+			}
+			.topm{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateX(90deg)  translateZ(135px);
+			}
+			.bottomm{
+				background-position: center;
+				background-image: url(img/mmexport1558868404710.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+				transform: rotateX(-90deg)  translateZ(224px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d">
+			<div class="child front"></div>
+			<div class="child back"></div>
+			<div class="child left"></div>
+			<div class="child right"></div>
+			<div class="childm top"></div>
+			<div class="childm bottom"></div>
+			<div class="kid frontm"></div>
+			<div class="kid backm"></div>
+			<div class="kid leftm"></div>
+			<div class="kid rightm"></div>
+			<div class="kidm topm"></div>
+			<div class="kidm bottomm"></div>
+		</div>
+	</body>
+</html>
